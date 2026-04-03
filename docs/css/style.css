@@ -1126,6 +1126,11 @@ button {
     transition: none;
   }
 
+  .mobile-menu,
+  .mobile-menu.is-open {
+    transition: none !important;
+  }
+
   .card:hover .card__img,
   .card:hover,
   .quote:hover,
