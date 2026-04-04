@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta name="description" content="Sabor da Vila — restaurante em Lisboa. Comida caseira com sabor tradicional." />
+    <meta
+      name="description"
+      content="Sabor da Vila — site de demonstração por Santiago Esteves. Criação de sites para negócios locais em Portugal."
+    />
     <meta name="theme-color" content="#1a1008" />
-    <title>Sabor da Vila - Restaurante em Lisboa</title>
+    <title>Sabor da Vila — Demo por Santiago Esteves | Sites para negócios locais</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,289 +19,453 @@
   </head>
   <body>
     <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
-    <nav class="nav" id="site-nav" aria-label="Navegação principal">
-      <div class="nav__inner">
-        <button type="button" class="nav__brand" data-scroll="hero">Sabor da Vila</button>
 
-        <div class="nav__desktop">
-          <button type="button" class="nav__link" data-scroll="sobre">sobre</button>
-          <button type="button" class="nav__link" data-scroll="menu">menu</button>
-          <button type="button" class="nav__link" data-scroll="testemunhos">Opiniões</button>
-          <button type="button" class="nav__link" data-scroll="contacto">contacto</button>
+    <header class="site-header" id="site-header">
+      <div class="dev-banner" role="region" aria-label="Portfólio do desenvolvedor">
+        <div class="dev-banner__inner">
+          <p class="dev-banner__text">
+            <strong>Site de demonstração</strong>
+            <span class="dev-banner__sep" aria-hidden="true">·</span>
+            <span>Santiago Esteves desenvolve sites para negócios locais.</span>
+          </p>
+          <button type="button" class="dev-banner__cta" data-scroll="orcamento">Pedir orçamento</button>
+        </div>
+      </div>
+
+      <nav class="nav" id="site-nav" aria-label="Navegação principal">
+        <div class="nav__inner">
+          <button type="button" class="nav__brand" data-scroll="hero">Sabor da Vila</button>
+
+          <div class="nav__desktop">
+            <button type="button" class="nav__link" data-scroll="sobre">Sobre o demo</button>
+            <button type="button" class="nav__link" data-scroll="menu">Menu</button>
+            <button type="button" class="nav__link" data-scroll="servicos">Serviços</button>
+            <button type="button" class="nav__link" data-scroll="orcamento">Orçamento</button>
+            <button type="button" class="nav__link" data-scroll="credibilidade">Credibilidade</button>
+            <button type="button" class="nav__link" data-scroll="contacto">Contacto</button>
+          </div>
+
+          <button
+            type="button"
+            class="nav__toggle"
+            id="nav-menu-btn"
+            aria-expanded="false"
+            aria-controls="mobile-nav-menu"
+            aria-label="Abrir menu"
+          >
+            <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+            <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
         </div>
 
-        <button
-          type="button"
-          class="nav__toggle"
-          id="nav-menu-btn"
-          aria-expanded="false"
-          aria-controls="mobile-nav-menu"
-          aria-label="Abrir menu"
-        >
-          <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <line x1="4" x2="20" y1="12" y2="12" />
-            <line x1="4" x2="20" y1="6" y2="6" />
-            <line x1="4" x2="20" y1="18" y2="18" />
-          </svg>
-          <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
-        </button>
-      </div>
-
-      <div class="mobile-menu" id="mobile-nav-menu">
-        <button type="button" class="mobile-menu__link" data-scroll="sobre">sobre</button>
-        <button type="button" class="mobile-menu__link" data-scroll="menu">menu</button>
-        <button type="button" class="mobile-menu__link" data-scroll="testemunhos">Opiniões</button>
-        <button type="button" class="mobile-menu__link" data-scroll="contacto">contacto</button>
-      </div>
-    </nav>
+        <div class="mobile-menu" id="mobile-nav-menu" aria-hidden="true">
+          <button type="button" class="mobile-menu__link" data-scroll="sobre">Sobre o demo</button>
+          <button type="button" class="mobile-menu__link" data-scroll="menu">Menu</button>
+          <button type="button" class="mobile-menu__link" data-scroll="servicos">Serviços</button>
+          <button type="button" class="mobile-menu__link" data-scroll="orcamento">Orçamento</button>
+          <button type="button" class="mobile-menu__link" data-scroll="credibilidade">Credibilidade</button>
+          <button type="button" class="mobile-menu__link" data-scroll="contacto">Contacto</button>
+        </div>
+      </nav>
+    </header>
 
     <main id="conteudo">
-    <section
-      class="hero"
-      id="hero"
-      data-fade
-      aria-label="Apresentação"
-    >
-      <div class="hero__inner fade-inner">
-        <p class="hero__tag">Restaurante em Lisboa</p>
-        <h1 class="hero__title">Sabor da Vila</h1>
-        <p class="hero__subtitle">Comida caseira com sabor tradicional</p>
-        <div class="hero__actions">
-          <button type="button" class="btn btn--primary" data-scroll="contacto">Reservar Mesa</button>
-          <button type="button" class="btn btn--outline-light" data-scroll="menu">Ver Menu</button>
+      <section class="hero" id="hero" data-fade aria-label="Apresentação do restaurante (demonstração)">
+        <div class="hero__inner fade-inner">
+          <p class="hero__tag">Exemplo de site para restaurante · Lisboa</p>
+          <h1 class="hero__title">Sabor da Vila</h1>
+          <p class="hero__subtitle">Comida caseira com sabor tradicional — conceito fictício para mostrar layout, texto e contactos.</p>
+          <p class="hero__dev-note">
+            Desenvolvido por <strong>Santiago Esteves</strong> · HTML, CSS e JavaScript estáticos · pronto para GitHub Pages.
+          </p>
+          <div class="hero__actions">
+            <button type="button" class="btn btn--primary" data-scroll="orcamento">Pedir orçamento para o seu negócio</button>
+            <button type="button" class="btn btn--outline-light" data-scroll="menu">Ver menu (demo)</button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" id="sobre" data-fade>
-      <div class="container">
-        <div class="sobre__grid fade-inner">
-          <div class="sobre__text">
-            <p class="section__eyebrow">A Nossa História</p>
-            <h2 class="section__title">Tradição à mesa, família no coração</h2>
-            <p class="sobre__body">
-              No Sabor da Vila, combinamos ingredientes frescos e receitas tradicionais para criar momentos de sabor
-              inesquecíveis. Ambiente familiar e acolhedor, perfeito para toda a família.
+      <section class="section" id="sobre" data-fade>
+        <div class="container">
+          <div class="sobre__grid fade-inner">
+            <div class="sobre__text">
+              <p class="section__eyebrow">Sobre este projeto</p>
+              <h2 class="section__title">Um exemplo completo para negócios locais</h2>
+              <p class="sobre__body">
+                Este ecrã mostra como pode ficar o site de um restaurante: história da marca, destaques do menu, benefícios,
+                prova social e contacto com mapa. Os textos e números são <strong>ilustrativos</strong> — substituídos pelos
+                dados reais do seu negócio no projeto final.
+              </p>
+              <div class="stats">
+                <div class="stats__item">
+                  <p class="stats__num">1</p>
+                  <p class="stats__label">Página demo completa</p>
+                </div>
+                <div class="stats__item">
+                  <p class="stats__num">3</p>
+                  <p class="stats__label">Ficheiros: HTML, CSS e JS</p>
+                </div>
+                <div class="stats__item">
+                  <p class="stats__num">WCAG</p>
+                  <p class="stats__label">Base: rótulos, foco e estrutura</p>
+                </div>
+              </div>
+            </div>
+            <div class="sobre__img-wrap">
+              <img
+                class="sobre__img"
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop"
+                alt="Fotografia de exemplo de refeição (Unsplash — ilustrativa)"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="menu" data-fade>
+        <div class="container">
+          <div class="menu__header fade-inner">
+            <p class="section__eyebrow">Secção de exemplo</p>
+            <h2 class="section__title">Pratos em destaque (conteúdo fictício)</h2>
+            <p class="menu__lead">
+              Imagens da <a href="https://unsplash.com" rel="noopener noreferrer" target="_blank">Unsplash</a> — no seu site
+              usamos as fotos do seu negócio.
             </p>
-            <div class="stats">
-              <div class="stats__item">
-                <p class="stats__num">12+</p>
-                <p class="stats__label">Anos de história</p>
+          </div>
+          <div class="cards">
+            <article class="card fade-inner" style="--delay: 0ms">
+              <div class="card__media">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1551248429-40975aa4de74?w=600&auto=format&fit=crop"
+                  alt="Exemplo visual: prato com peixe"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-              <div class="stats__item">
-                <p class="stats__num">500+</p>
-                <p class="stats__label">Clientes felizes</p>
+              <div class="card__body">
+                <span class="badge">Prato principal</span>
+                <h3 class="card__title">Bacalhau à Vila</h3>
+                <p class="card__desc">Texto de exemplo para mostrar título, descrição e hierarquia visual.</p>
               </div>
-              <div class="stats__item">
-                <p class="stats__num">100%</p>
-                <p class="stats__label">Receitas caseiras</p>
+            </article>
+            <article class="card fade-inner" style="--delay: 80ms">
+              <div class="card__media">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1527477399490-64bcd8844763?w=600&auto=format&fit=crop"
+                  alt="Exemplo visual: frango grelhado"
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
-            </div>
-          </div>
-          <div class="sobre__img-wrap">
-            <img
-              class="sobre__img"
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&auto=format&fit=crop"
-              alt="Cozinha tradicional"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--muted" id="menu" data-fade>
-      <div class="container">
-        <div class="menu__header fade-inner">
-          <p class="section__eyebrow">Os Nossos Pratos</p>
-          <h2 class="section__title">O Melhor da Cozinha Portuguesa</h2>
-        </div>
-        <div class="cards">
-          <article class="card fade-inner" style="--delay: 0ms">
-            <div class="card__media">
-            <img
-              class="card__img"
-              src="https://images.unsplash.com/photo-1551248429-40975aa4de74?w=600&auto=format&fit=crop"
-              alt="Bacalhau à Vila"
-              loading="lazy"
-              decoding="async"
-            />
-            </div>
-            <div class="card__body">
-              <span class="badge">Prato Principal</span>
-              <h3 class="card__title">Bacalhau à Vila</h3>
-              <p class="card__desc">Bacalhau fresco com batatas e legumes da época</p>
-            </div>
-          </article>
-          <article class="card fade-inner" style="--delay: 80ms">
-            <div class="card__media">
-            <img
-              class="card__img"
-              src="https://images.unsplash.com/photo-1527477399490-64bcd8844763?w=600&auto=format&fit=crop"
-              alt="Frango de Churrasco"
-              loading="lazy"
-              decoding="async"
-            />
-            </div>
-            <div class="card__body">
-              <span class="badge">Prato Principal</span>
-              <h3 class="card__title">Frango de Churrasco</h3>
-              <p class="card__desc">Marinado com ervas aromáticas e grelhado na perfeição</p>
-            </div>
-          </article>
-          <article class="card fade-inner" style="--delay: 160ms">
-            <div class="card__media">
-            <img
-              class="card__img"
-              src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&auto=format&fit=crop"
-              alt="Sopa do Dia"
-              loading="lazy"
-              decoding="async"
-            />
-            </div>
-            <div class="card__body">
-              <span class="badge">Entrada</span>
-              <h3 class="card__title">Sopa do Dia</h3>
-              <p class="card__desc">Sempre fresca e caseira, confeccionada diariamente</p>
-            </div>
-          </article>
-          <article class="card fade-inner" style="--delay: 240ms">
-            <div class="card__media">
-            <img
-              class="card__img"
-              src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format&fit=crop"
-              alt="Sobremesas"
-              loading="lazy"
-              decoding="async"
-            />
-            </div>
-            <div class="card__body">
-              <span class="badge">Sobremesa</span>
-              <h3 class="card__title">Sobremesas</h3>
-              <p class="card__desc">Doçaria tradicional feita na casa</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--orange" id="beneficios" data-fade>
-      <div class="container">
-        <div class="benefits">
-          <div class="benefit fade-inner" style="--delay: 0ms">
-            <div class="benefit__icon" aria-hidden="true">🍃</div>
-            <h3 class="benefit__title">Ingredientes Frescos</h3>
-            <p class="benefit__desc">Selecionados diariamente nos melhores mercados locais</p>
-          </div>
-          <div class="benefit fade-inner" style="--delay: 80ms">
-            <div class="benefit__icon" aria-hidden="true">🏠</div>
-            <h3 class="benefit__title">Ambiente Acolhedor</h3>
-            <p class="benefit__desc">Um espaço familiar e confortável para toda a família</p>
-          </div>
-          <div class="benefit fade-inner" style="--delay: 160ms">
-            <div class="benefit__icon" aria-hidden="true">⚡</div>
-            <h3 class="benefit__title">Serviço Rápido</h3>
-            <p class="benefit__desc">Atendimento eficiente porque o seu tempo importa</p>
+              <div class="card__body">
+                <span class="badge">Prato principal</span>
+                <h3 class="card__title">Frango no forno</h3>
+                <p class="card__desc">Cartões assim organizam o menu, serviços ou pacotes do seu negócio.</p>
+              </div>
+            </article>
+            <article class="card fade-inner" style="--delay: 160ms">
+              <div class="card__media">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&auto=format&fit=crop"
+                  alt="Exemplo visual: sopa"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="card__body">
+                <span class="badge">Entrada</span>
+                <h3 class="card__title">Sopa do dia</h3>
+                <p class="card__desc">Ideal para destacar produtos sazonais ou promoções.</p>
+              </div>
+            </article>
+            <article class="card fade-inner" style="--delay: 240ms">
+              <div class="card__media">
+                <img
+                  class="card__img"
+                  src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format&fit=crop"
+                  alt="Exemplo visual: sobremesa"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="card__body">
+                <span class="badge">Sobremesa</span>
+                <h3 class="card__title">Sobremesas</h3>
+                <p class="card__desc">Bloco final antes de reforçar confiança e contacto.</p>
+              </div>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section" id="testemunhos" data-fade>
-      <div class="container">
-        <div class="menu__header fade-inner">
-          <p class="section__eyebrow">Testemunhos</p>
-          <h2 class="section__title">O que dizem os nossos clientes</h2>
+      <section class="section" id="servicos" data-fade>
+        <div class="container">
+          <div class="menu__header fade-inner">
+            <p class="section__eyebrow">O que faço por si</p>
+            <h2 class="section__title">Sites para negócios locais</h2>
+            <p class="menu__lead">
+              Foco em presença online clara: o visitante percebe o que oferece, confia e contacta em poucos segundos.
+            </p>
+          </div>
+          <ul class="services-list fade-inner">
+            <li class="services-list__item">
+              <span class="services-list__icon" aria-hidden="true">◇</span>
+              <div>
+                <h3 class="services-list__title">Websites one-page ou multi-página</h3>
+                <p class="services-list__desc">Estrutura à medida do seu sector (restauração, serviços, retalho).</p>
+              </div>
+            </li>
+            <li class="services-list__item">
+              <span class="services-list__icon" aria-hidden="true">◇</span>
+              <div>
+                <h3 class="services-list__title">Design responsivo e rápido</h3>
+                <p class="services-list__desc">Boa leitura em telemóvel, imagens optimizadas e carregamento leve.</p>
+              </div>
+            </li>
+            <li class="services-list__item">
+              <span class="services-list__icon" aria-hidden="true">◇</span>
+              <div>
+                <h3 class="services-list__title">Formulário, contactos e Google Maps</h3>
+                <p class="services-list__desc">Visitantes encontram morada, horário e forma de falar consigo sem fricção.</p>
+              </div>
+            </li>
+            <li class="services-list__item">
+              <span class="services-list__icon" aria-hidden="true">◇</span>
+              <div>
+                <h3 class="services-list__title">Entrega em HTML/CSS/JS ou GitHub Pages</h3>
+                <p class="services-list__desc">Código limpo que pode hospedar onde preferir; ajuda na primeira publicação.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="tech-stack fade-inner" aria-label="Stack técnica">
+            <p class="tech-stack__label">Stack deste demo</p>
+            <ul class="tech-stack__tags">
+              <li>HTML5 semântico</li>
+              <li>CSS3</li>
+              <li>JavaScript (vanilla)</li>
+              <li>Acessibilidade base</li>
+              <li>GitHub Pages</li>
+            </ul>
+          </div>
         </div>
-        <div class="testimonials">
-          <blockquote class="quote fade-inner" style="--delay: 0ms">
-            <span class="quote__mark" aria-hidden="true">"</span>
-            <div class="quote__header">
-              <span class="quote__avatar" aria-hidden="true">AP</span>
-              <p class="quote__stars">★★★★★</p>
+      </section>
+
+      <section class="section section--hire" id="orcamento" data-fade>
+        <div class="container">
+          <div class="hire fade-inner">
+            <p class="section__eyebrow section__eyebrow--on-dark">Trabalhar connosco</p>
+            <h2 class="section__title section__title--on-dark">Pronto para o site do seu negócio?</h2>
+            <p class="hire__lead">
+              Descreva o seu projecto — resposta em até <strong>2 dias úteis</strong> com próximos passos e estimativa. O
+              primeiro contacto é sem compromisso.
+            </p>
+            <ul class="hire__bullets">
+              <li>Briefing curto por email ou chamada</li>
+              <li>Proposta alinhada ao seu orçamento</li>
+              <li>Conteúdos seus (texto e fotos) ou orientação para os preparar</li>
+            </ul>
+            <div class="hire__actions">
+              <a class="btn btn--primary btn--lg" href="mailto:santiagoesteves35@gmail.com?subject=Pedido%20de%20or%C3%A7amento%20%E2%80%94%20site%20para%20neg%C3%B3cio%20local">Enviar email direto</a>
+              <button type="button" class="btn btn--outline-dark btn--lg" data-scroll="contacto">Preencher formulário</button>
             </div>
-            <p class="quote__text">Melhor restaurante da zona! Atendimento impecável.</p>
-            <footer class="quote__author">Ana P.</footer>
-          </blockquote>
-          <blockquote class="quote fade-inner" style="--delay: 80ms">
-            <span class="quote__mark" aria-hidden="true">"</span>
-            <div class="quote__header">
-              <span class="quote__avatar" aria-hidden="true">JR</span>
-              <p class="quote__stars">★★★★★</p>
-            </div>
-            <p class="quote__text">Comida caseira como a da minha avó!</p>
-            <footer class="quote__author">João R.</footer>
-          </blockquote>
-          <blockquote class="quote fade-inner" style="--delay: 160ms">
-            <span class="quote__mark" aria-hidden="true">"</span>
-            <div class="quote__header">
-              <span class="quote__avatar" aria-hidden="true">MC</span>
-              <p class="quote__stars">★★★★★</p>
-            </div>
-            <p class="quote__text">Adoro a sopa do dia, sempre diferente e deliciosa.</p>
-            <footer class="quote__author">Maria C.</footer>
-          </blockquote>
+            <p class="hire__email">
+              <a href="mailto:santiagoesteves35@gmail.com">santiagoesteves35@gmail.com</a>
+            </p>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section section--dark" id="contacto" data-fade>
-      <div class="container">
-        <div class="contact__grid">
-          <div class="fade-inner">
-            <p class="section__eyebrow">Fale Connosco</p>
-            <h2 class="section__title">Venha Visitar-nos</h2>
+      <section class="section section--orange" id="beneficios" data-fade>
+        <div class="container">
+          <div class="benefits">
+            <div class="benefit fade-inner" style="--delay: 0ms">
+              <div class="benefit__icon" aria-hidden="true">✓</div>
+              <h3 class="benefit__title">Clareza</h3>
+              <p class="benefit__desc">Mensagem principal acima da dobra: o que é o negócio e como contactar.</p>
+            </div>
+            <div class="benefit fade-inner" style="--delay: 80ms">
+              <div class="benefit__icon" aria-hidden="true">✓</div>
+              <h3 class="benefit__title">Confiança</h3>
+              <p class="benefit__desc">Secções que explicam valor, processo e contactos verificáveis (sem reviews inventadas).</p>
+            </div>
+            <div class="benefit fade-inner" style="--delay: 160ms">
+              <div class="benefit__icon" aria-hidden="true">✓</div>
+              <h3 class="benefit__title">Conversão</h3>
+              <p class="benefit__desc">Chamadas à acção repetidas: orçamento, email e formulário com rótulos explícitos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="contact__list">
-              <div class="contact__row">
-                <div class="contact__icon-wrap" aria-hidden="true">📞</div>
-                <div>
-                  <p class="contact__label">Telefone</p>
-                  <p class="contact__value">912 345 678</p>
+      <section class="section" id="credibilidade" data-fade>
+        <div class="container">
+          <div class="menu__header fade-inner">
+            <p class="section__eyebrow">Transparência</p>
+            <h2 class="section__title">Credibilidade em portfólio</h2>
+            <p class="menu__lead">
+              Prefiro não publicar testemunhos até poder citar clientes reais com autorização. Enquanto isso, aqui está o que
+              pode esperar ao trabalhar comigo.
+            </p>
+          </div>
+          <div class="testimonials">
+            <blockquote class="quote quote--neutral fade-inner" style="--delay: 0ms">
+              <span class="quote__mark" aria-hidden="true">"</span>
+              <p class="quote__text">
+                Comunicação por escrito, prazos acordados por email e código entregue de forma organizada (ficheiros e
+                instruções mínimas para publicar).
+              </p>
+              <footer class="quote__author">Compromisso de trabalho</footer>
+            </blockquote>
+            <blockquote class="quote quote--neutral fade-inner" style="--delay: 80ms">
+              <span class="quote__mark" aria-hidden="true">"</span>
+              <p class="quote__text">
+                Este site é um <strong>case study estático</strong>: mostra tipografia, cor, componentes e fluxo de contacto —
+                o mesmo tipo de entrega que pode receber para o seu negócio.
+              </p>
+              <footer class="quote__author">Sobre este demo</footer>
+            </blockquote>
+            <blockquote class="quote quote--accent fade-inner" style="--delay: 160ms">
+              <span class="quote__mark" aria-hidden="true">"</span>
+              <p class="quote__text">
+                À procura do <strong>primeiro cliente pago</strong> neste formato? Escreva com o seu sector e cidade — posso
+                propor um pacote inicial com condições de lançamento.
+              </p>
+              <footer class="quote__author">Santiago Esteves</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="contacto" data-fade>
+        <div class="container">
+          <div class="contact__grid">
+            <div class="fade-inner">
+              <p class="section__eyebrow">Contacto</p>
+              <h2 class="section__title">Fale com Santiago Esteves</h2>
+              <p class="contact__intro">
+                Use o formulário — abre o seu cliente de email com a mensagem preenchida (funciona em computador e telemóvel
+                com app de email configurada).
+              </p>
+
+              <div class="contact__list">
+                <div class="contact__row">
+                  <div class="contact__icon-wrap" aria-hidden="true">✉</div>
+                  <div>
+                    <p class="contact__label">Email</p>
+                    <p class="contact__value">
+                      <a class="contact__link" href="mailto:santiagoesteves35@gmail.com">santiagoesteves35@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__icon-wrap" aria-hidden="true">◎</div>
+                  <div>
+                    <p class="contact__label">Zona</p>
+                    <p class="contact__value">Portugal · reuniões online ou presenciais conforme localização</p>
+                  </div>
+                </div>
+                <div class="contact__row">
+                  <div class="contact__icon-wrap" aria-hidden="true">⏱</div>
+                  <div>
+                    <p class="contact__label">Resposta</p>
+                    <p class="contact__value">Até 2 dias úteis</p>
+                  </div>
                 </div>
               </div>
-              <div class="contact__row">
-                <div class="contact__icon-wrap" aria-hidden="true">📍</div>
-                <div>
-                  <p class="contact__label">Morada</p>
-                  <p class="contact__value">Rua das Flores, 24, Lisboa</p>
-                </div>
-              </div>
-              <div class="contact__row">
-                <div class="contact__icon-wrap" aria-hidden="true">🕐</div>
-                <div>
-                  <p class="contact__label">Horário</p>
-                  <p class="contact__value">Segunda a Domingo · 12h – 22h</p>
-                </div>
-              </div>
             </div>
 
-            <a class="contact__cta" href="tel:912345678">📞 Ligar Agora</a>
+            <div class="contact-form-card fade-inner">
+              <h3 class="contact-form__title">Pedido de orçamento</h3>
+              <form class="contact-form" id="contact-form" action="#" method="post" novalidate>
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-name">Nome <span class="contact-form__req">*</span></label>
+                  <input class="contact-form__input" type="text" id="contact-name" name="name" autocomplete="name" required placeholder="O seu nome" />
+                </div>
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-email">Email <span class="contact-form__req">*</span></label>
+                  <input
+                    class="contact-form__input"
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    placeholder="nome@empresa.pt"
+                  />
+                </div>
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-business">Nome do negócio</label>
+                  <input class="contact-form__input" type="text" id="contact-business" name="business" autocomplete="organization" placeholder="Ex.: Pastelaria Central" />
+                </div>
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-phone">Telefone</label>
+                  <input class="contact-form__input" type="tel" id="contact-phone" name="phone" autocomplete="tel" placeholder="+351 …" />
+                </div>
+                <div class="contact-form__field">
+                  <label class="contact-form__label" for="contact-type">Tipo de projecto <span class="contact-form__req">*</span></label>
+                  <select class="contact-form__select" id="contact-type" name="project_type" required>
+                    <option value="">Seleccione…</option>
+                    <option value="Site novo (one-page)">Site novo (one-page)</option>
+                    <option value="Site novo (várias páginas)">Site novo (várias páginas)</option>
+                    <option value="Renovação de site existente">Renovação de site existente</option>
+                    <option value="Outro / ainda não sei">Outro / ainda não sei</option>
+                  </select>
+                </div>
+                <div class="contact-form__field contact-form__field--full">
+                  <label class="contact-form__label" for="contact-message">Mensagem <span class="contact-form__req">*</span></label>
+                  <textarea
+                    class="contact-form__textarea"
+                    id="contact-message"
+                    name="message"
+                    required
+                    rows="5"
+                    placeholder="Sector, cidade, prazo desejado, link para redes ou site actual (se existir)…"
+                  ></textarea>
+                </div>
+                <p class="contact-form__hint" id="contact-form-hint" role="status" aria-live="polite"></p>
+                <div class="contact-form__actions">
+                  <button type="submit" class="btn btn--primary contact-form__submit">Enviar pedido por email</button>
+                </div>
+                <p class="contact-form__privacy">
+                  Ao enviar, abre-se o seu programa de email com os dados acima. Não armazeno submissões neste site estático.
+                </p>
+              </form>
+            </div>
           </div>
 
-          <a
-            class="maps-card fade-inner"
-            href="https://www.google.com/maps/search/?api=1&amp;query=Rua+das+Flores+24+Lisboa"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="maps-card__dot" aria-hidden="true"></span>
-            <p class="maps-card__title">Ver no Google Maps</p>
-            <p class="maps-card__sub">Rua das Flores, 24 · Lisboa</p>
-          </a>
+          <div class="maps-row fade-inner">
+            <a
+              class="maps-card maps-card--inline"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Portugal"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="maps-card__dot" aria-hidden="true"></span>
+              <p class="maps-card__title">Mapa (exemplo)</p>
+              <p class="maps-card__sub">No seu site: localização real da loja ou escritório</p>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </main>
 
     <footer class="footer">
       <p>
-        © 2026 <span class="accent">Sabor da Vila</span> · Projeto de demonstração · Todos os direitos reservados · Feito
-        com ♥ em Lisboa
+        © 2026 <span class="accent">Sabor da Vila</span> — conceito fictício · Site e código por
+        <a class="footer__link" href="mailto:santiagoesteves35@gmail.com">Santiago Esteves</a>
+        · <a class="footer__link" href="#orcamento">Pedir orçamento</a>
       </p>
     </footer>
 
